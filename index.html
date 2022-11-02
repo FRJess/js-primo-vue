@@ -22,8 +22,16 @@
 <body>
 
   <div id="app">
-    <h1>{{messaggio}}</h1>
+    <input v-model="messaggio" type="text">
+    <h1 :class="coloreClasse">{{messaggio}}</h1>
+    <input v-model="coloreClasse" type="text">
+    <button @click="coloreClasse = 'verde'">Colora di verde</button><br>
+    <button @click="colorRed()">Colora di rosso</button><br>
+    <button @click="dynamicBlu('blu')">Colora di blu dinamico</button>
+
   </div>
+
+
 
   <!-- JS -->
   <script src="js/script.js"></script>
